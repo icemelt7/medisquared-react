@@ -1,0 +1,101 @@
+body{
+	background: #f5f5f5!important;
+}
+.page-header .navbar-fixed-top{
+	background: #f5f5f5;
+}
+.page-header .navbar .search .form-control{
+	background: #fff;
+	border: 1px solid #c2cad8
+}
+.page-header.navbar{
+	height: 60px;
+	min-height: 60px;
+}
+.page-header.navbar .page-logo .logo-default{
+	margin-top: 10px;
+}
+.page-content-wrapper .page-content{
+	margin-left: auto;
+}
+.page-container-bg-solid .page-bar,
+.page-content-white .page-bar{
+	margin-top: -15px;
+}
+.login-options{
+	margin-left: 30px;
+	margin-right: 30px;
+}
+.page-header .navbar .page-logo{
+	max-width: 12	0px;
+	display: inline-block;
+}
+.page-lock .lock-head{
+	background: #3598dc;
+	color: #fff;
+}
+.page-lock .page-body{
+	background: #fff;
+}
+.form-login-wrapper .lock-body{
+	border-bottom: none;
+	margin: 0;
+	padding: 30px;
+}
+.login-sec .btn-large{
+	border-radius: 33px;
+	background: #218e29;
+	border-color: #218e29;
+}
+.login-sec .btn-large:hover,
+.login-sec .btn-large:focus{
+	background: #218e29;
+	border-color: #218e29;
+}
+.form-horizontal .tab-pane .form-group.form-md-line-input{
+	margin: 0;
+}
+.mt-repeater .mt-repeater-input{
+	display: block;
+	width: auto;
+	padding: 0;
+}
+.profile-links{
+	text-align: center;
+	padding: 0 20px 20px;
+}
+.profile-usertitle,
+.portlet-body{
+	color: #6c7b88;
+}
+.profile-list-div h4{
+	font-size: 15px;
+	font-weight: bold;
+}
+.page-header .navbar .navbar-nav>li>a{
+	background: #218e29;
+	color: #fff;
+}
+.page-content-row.job-details .page-content-col{
+	padding-left: 0;
+}
+.job-info{
+	display: table;
+	width: 100%;
+	padding: 0 20px 20px;
+}
+.job-info > div{
+	color: #6c7b88;
+	font-size: 12px;
+	display: table-cell;
+}
+.job-info > div span{
+	margin-right: 5px;
+}
+.job-info > div:last-child{
+	text-align: right;
+}
+.job-actions{
+	text-align: center;
+	padding: 0 20px 20px;
+}
