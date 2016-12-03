@@ -5,7 +5,7 @@ class Login extends Component {
     loadCSS('assets/pages/css/lock.min.css');
     loadCSS('assets/pages/css/login.min.css');
     loadCSS('assets/layouts/global/css/main.css');
-    loadCSS('assets/css/main.css');
+    loadCSS('assets/css/style.css');
   }
   render(){
     return (
