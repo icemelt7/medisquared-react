@@ -182,12 +182,12 @@ class UserRegister extends Component {
                             </div>
                           </div>
                           <div className="form-group">
-                            <label className="control-label col-md-3">Address
+                            <label className="control-label col-md-3">Medical License Number
                               <span className="required" aria-required="true"> * </span>
                             </label>
                             <div className="col-md-4">
                               <input type="text" className="form-control" name="address" />
-                              <span className="help-block"> Provide your street address </span>
+                              <span className="help-block"> Provide your medical license number </span>
                             </div>
                           </div>
                           <div className="form-group">
@@ -486,18 +486,18 @@ class UserRegister extends Component {
                           </div>
                         </div>
                         <div className="tab-pane" id="tab3">
-                          <h3 className="block">Provide your billing and credit card details</h3>
+                          <h3 className="block">Provide your past working experience</h3>
                           <div className="form-group">
-                            <label className="control-label col-md-3">Card Holder Name
+                            <label className="control-label col-md-3">Organization Name
                               <span className="required" aria-required="true"> * </span>
                             </label>
                             <div className="col-md-4">
-                              <input type="text" className="form-control" name="card_name" />
+                              <input type="text" className="form-control" name="organization_name" />
                               <span className="help-block"> </span>
                             </div>
                           </div>
                           <div className="form-group">
-                            <label className="control-label col-md-3">Card Number
+                            <label className="control-label col-md-3">Start Date
                               <span className="required" aria-required="true"> * </span>
                             </label>
                             <div className="col-md-4">
@@ -506,7 +506,7 @@ class UserRegister extends Component {
                             </div>
                           </div>
                           <div className="form-group">
-                            <label className="control-label col-md-3">CVC
+                            <label className="control-label col-md-3">End Date
                               <span className="required" aria-required="true"> * </span>
                             </label>
                             <div className="col-md-4">
@@ -515,27 +515,10 @@ class UserRegister extends Component {
                             </div>
                           </div>
                           <div className="form-group">
-                            <label className="control-label col-md-3">Expiration(MM/YYYY)
-                              <span className="required" aria-required="true"> * </span>
-                            </label>
-                            <div className="col-md-4">
-                              <input type="text" placeholder="MM/YYYY" maxLength={7} className="form-control" name="card_expiry_date" />
-                              <span className="help-block"> e.g 11/2020 </span>
-                            </div>
-                          </div>
-                          <div className="form-group">
                             <label className="control-label col-md-3">Payment Options
                               <span className="required" aria-required="true"> * </span>
                             </label>
-                            <div className="col-md-4">
-                              <div className="checkbox-list">
-                                <label>
-                                  <input type="checkbox" name="payment[]" defaultValue={1} data-title="Auto-Pay with this Credit Card." /> Auto-Pay with this Credit Card </label>
-                                <label>
-                                  <input type="checkbox" name="payment[]" defaultValue={2} data-title="Email me monthly billing." /> Email me monthly billing </label>
-                              </div>
-                              <div id="form_payment_error"> </div>
-                            </div>
+                            
                           </div>
                         </div>
                         <div className="tab-pane" id="tab4">
