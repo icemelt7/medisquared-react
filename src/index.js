@@ -11,6 +11,7 @@ import UserProfile from './pages/UserProfile';
 import CompanyRegister from './pages/CompanyRegister';
 import UserRegister from './pages/UserRegister';
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 ReactDOM.render(
   <Router history={hashHistory}>
@@ -18,6 +19,7 @@ ReactDOM.render(
     <Route path="/company-register" component={CompanyRegister} />
     <Route path="/user-profile" component={UserProfile} />
     <Route path="/login" component={Login} />
+    <Route path="/register" component={Register} />
     <Redirect from="/" to="/user-register" />
   </Router>,
   document.getElementById('root')
