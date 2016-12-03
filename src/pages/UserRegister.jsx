@@ -53,7 +53,7 @@ class UserRegister extends Component {
                     <span className="step-title"> Step 1 of 4 </span>
                   </span>
                 </div>
-                <div className="actions">
+                {/*<div className="actions">
                   <a className="btn btn-circle btn-icon-only btn-default" href="javascript:;">
                     <i className="icon-cloud-upload" />
                   </a>
@@ -63,7 +63,7 @@ class UserRegister extends Component {
                   <a className="btn btn-circle btn-icon-only btn-default" href="javascript:;">
                     <i className="icon-trash" />
                   </a>
-                </div>
+                </div>*/}
               </div>
               <div className="portlet-body form">
                 <form className="mt-repeater form-horizontal" action="#" id="submit_form" method="POST">

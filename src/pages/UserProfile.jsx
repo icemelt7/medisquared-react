@@ -42,50 +42,19 @@ class UserProfile extends Component {
                                     <a href="index.html" className="text-uppercase">
                                         <i className="icon-home"></i> Home </a>
                                 </li>
-                                <li className="dropdown dropdown-fw dropdown-fw-disabled  ">
+                                <li className="open">
                                     <a href="javascript:;" className="text-uppercase">
-                                        <i className="icon-puzzle"></i> Tab Menu 2 </a>
-                                    <ul className="dropdown-menu dropdown-menu-fw">
-                                        <li className="dropdown">
-                                            <a href="javascript:;">
-                                                <i className="icon-diamond"></i> Submenu 1 </a>
-                                        </li>
-                                        <li className="dropdown more-dropdown-sub">
-                                            <a href="javascript:;">
-                                                <i className="icon-puzzle"></i> Components </a>
-                                            <ul className="dropdown-menu">
-                                                <li>
-                                                    <a href="components_date_time_pickers.html"> Date & Time Pickers </a>
-                                                </li>
-                                                <li>
-                                                    <a href="components_color_pickers.html"> Color Pickers </a>
-                                                </li>
-                                                <li>
-                                                    <a href="components_select2.html"> Select2 Dropdowns </a>
-                                                </li>
-                                                
-                                            </ul>
-                                        </li>
-                                        
-                                    </ul>
+                                        <i className="icon-user"></i> Profile </a>
                                 </li>
-                                <li className="dropdown dropdown-fw dropdown-fw-disabled  ">
+                                <li>
                                     <a href="javascript:;" className="text-uppercase">
-                                        <i className="icon-briefcase"></i> Tab Menu 3 </a>
-                                    <ul className="dropdown-menu dropdown-menu-fw">
-                                        <li>
-                                            <a href="table_static_basic.html"> Basic Tables </a>
-                                        </li>
-                                        <li>
-                                            <a href="table_static_responsive.html"> Responsive Tables </a>
-                                        </li>
-                                        <li>
-                                            <a href="table_bootstrap.html"> Bootstrap Tables </a>
-                                        </li>
-                                        
-                                    </ul>
+                                        <i className="icon-puzzle"></i> Library </a>
                                 </li>
-                                <li className="dropdown dropdown-fw dropdown-fw-disabled  active open selected">
+                                <li>
+                                    <a href="javascript:;" className="text-uppercase">
+                                        <i className="icon-briefcase"></i> Jobs </a>
+                                </li>
+                                {/*<li className="dropdown dropdown-fw dropdown-fw-disabled  active open selected">
                                     <a href="javascript:;" className="text-uppercase">
                                         <i className="icon-layers"></i> Pages </a>
                                     <ul className="dropdown-menu dropdown-menu-fw">
@@ -153,7 +122,7 @@ class UserProfile extends Component {
                                         </li>
                                         
                                     </ul>
-                                </li>
+                                </li>*/}
                             </ul>
                         </div>
                         {/* END HEADER MENU */}
