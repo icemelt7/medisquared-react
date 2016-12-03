@@ -13,7 +13,7 @@ class UserRegister extends Component {
               <div className="clearfix navbar-fixed-top">
                 {/* BEGIN LOGO */}
                 <a id="index" className="page-logo" href="index.html">
-                  <img src="./images/logo.png" width={100} alt="Logo" /> </a>
+                  <img src="assets/images/logo.png" width={100} alt="Logo" /> </a>
                 {/* END LOGO */}
                 {/* BEGIN SEARCH */}
                 <form className="search" action="extra_search.html" method="GET">
