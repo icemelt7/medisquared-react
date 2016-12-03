@@ -1,6 +1,18 @@
 import React, {Component} from 'react';
 /* eslint-disable */
-var CompanyRegister = React.createClass({
+class CompanyRegister extends Component {
+    componentDidMount(){
+        $script(["assets/global/plugins/select2/js/select2.full.min.js", 
+                "assets/global/plugins/jquery-validation/js/jquery.validate.min.js" ,
+                "assets/global/plugins/jquery-validation/js/additional-methods.min.js", 
+                "assets/global/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js", 
+                "assets/global/plugins/jquery-repeater/jquery.repeater.js" ,
+                "assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"], 'external-scripts');
+        $script.ready('external-scripts', function() {
+            $script(["assets/pages/scripts/form-repeater.min.js","assets/pages/scripts/form-wizard.js"]);
+        })
+        
+    }
     render(){
         
     return (
@@ -609,6 +621,6 @@ var CompanyRegister = React.createClass({
       </div>
     );
   }
-});
+};
 
 export default CompanyRegister;
