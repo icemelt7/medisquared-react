@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router'
 /* eslint-disable */
 class Register extends Component {
   componentDidMount(){
@@ -9,17 +10,17 @@ class Register extends Component {
   }
   render(){
     return (
-<div className="page-lock">
+    <div className="page-lock">
         <div className="page-logo">
           <a className="brand" href="index.html">
-            <img src="./images/logo.png" width={120} alt="logo" /> </a>
+            <img src="assets/images/logo.png" width={120} alt="logo" /> </a>
         </div>
         <div className="page-body">
           <div className="form-login-wrapper">
             <div className="lock-head"> Registration </div>
             <div className="lock-body login-body">
-              <a href="user-register.html" className="btn btn-circle green-jungle btn-block btn-lg m-icon-big">Personal</a>
-              <a href="user-register-hr.html" className="btn btn-circle green-jungle btn-block btn-lg m-icon-big pull-right">Human Resource</a>
+              <Link to="user-register" className="btn btn-circle green-jungle btn-block btn-lg m-icon-big">Personal</Link>
+              <Link to="company-register" className="btn btn-circle green-jungle btn-block btn-lg m-icon-big pull-right">Human Resource</Link>
             </div>
           </div>
           <div className="form-forget-wrapper" style={{display: 'none'}}>
