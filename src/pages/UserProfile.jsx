@@ -1115,8 +1115,7 @@ class UserProfile extends Component {
                                     <input type="checkbox" className="make-switch" defaultValue="checked" data-size="small" data-on-color="warning" data-on-text="ON" data-off-color="default" data-off-text="OFF" /> </li>
                             </ul>
                             <div className="inner-content">
-                                <button className="btn btn-success">
-                                    <i className="icon-settings"></i> Save Changes</button>
+                                <button className="btn btn-success"><i className="icon-settings"></i> Save Changes</button>
                             </div>
                         </div>
                     </div>

@@ -32,8 +32,7 @@ class Register extends Component {
                   <input className="form-control placeholder-no-fix" type="text" autoComplete="off" placeholder="Email" name="email" />
                 </div>
                 <div className="form-actions">
-                  <button type="button" id="back-btn" className="btn green btn-outline">Back</button>
-                  <button type="submit" className="btn btn-success uppercase pull-right">Submit</button>
+                  <button type="button" id="back-btn" className="btn green btn-outline">Back</button> <button type="submit" className="btn btn-success uppercase pull-right">Submit</button>
                 </div>
               </form>
             </div>
