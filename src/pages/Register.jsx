@@ -38,7 +38,7 @@ class Register extends Component {
             </div>
           </div>
         </div>
-        <div className="page-footer-custom"> 2016 © MediSquared. All Rights Reserved. </div>
+        <div className="page-footer-custom"> 2016 &copy; MediSquared. All Rights Reserved. </div>
       </div>
 
     );

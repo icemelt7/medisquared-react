@@ -633,7 +633,7 @@ class UserRegister extends Component {
             </div>
           </div>
           {/* BEGIN FOOTER */}
-          <p className="copyright"> 2016 © MediSquared. All Rights Reserved.</p>
+          <p className="copyright"> 2016 &copy; MediSquared. All Rights Reserved.</p>
           <a href="#index" className="go2top">
             <i className="icon-arrow-up" />
           </a>
