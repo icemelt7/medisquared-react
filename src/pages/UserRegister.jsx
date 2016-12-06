@@ -645,14 +645,9 @@ class UserRegister extends Component {
                     <div className="form-actions">
                       <div className="row">
                         <div className="col-md-offset-3 col-md-9">
-                          <a href="javascript:;" className="btn default button-previous disabled" style={{display: 'none'}}>
-                            <i className="fa fa-angle-left" /> Back </a>
-                          <a href="javascript:;" className="btn btn-outline green button-next"> Continue
-                            <i className="fa fa-angle-right" />
-                          </a>
-                          <a href="javascript:;" className="btn green button-submit" style={{display: 'none'}}> Submit
-                            <i className="fa fa-check" />
-                          </a>
+                          <a href="javascript:;" className="btn default button-previous disabled" style={{display: 'none'}}><i className="fa fa-angle-left" /> Back </a> 
+                          <a href="javascript:;" className="btn btn-outline green button-next"> Continue <i className="fa fa-angle-right" /></a> 
+                          <a href="javascript:;" className="btn green button-submit" style={{display: 'none'}}> Submit <i className="fa fa-check" /></a>
                         </div>
                       </div>
                     </div>
@@ -662,7 +657,7 @@ class UserRegister extends Component {
             </div>
           </div>
           {/* BEGIN FOOTER */}
-          <p className="copyright"> 2016 © MediSquared. All Rights Reserved.</p>
+          <p className="copyright"> 2016 &copy; MediSquared. All Rights Reserved.</p>
           <a href="#index" className="go2top">
             <i className="icon-arrow-up" />
           </a>
