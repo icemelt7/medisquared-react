@@ -34,11 +34,6 @@ var FormWizard = function () {
                 errorClass: 'help-block help-block-error', // default input error message class
                 focusInvalid: false, // do not focus the last invalid input
                 rules: {
-                    //account
-                    username: {
-                        minlength: 5,
-                        required: true
-                    },
                     password: {
                         minlength: 5,
                         required: true
@@ -71,28 +66,7 @@ var FormWizard = function () {
                     country: {
                         required: true
                     },
-                    //payment
-                    card_name: {
-                        required: true
-                    },
-                    card_number: {
-                        minlength: 16,
-                        maxlength: 16,
-                        required: true
-                    },
-                    card_cvc: {
-                        digits: true,
-                        required: true,
-                        minlength: 3,
-                        maxlength: 4
-                    },
-                    card_expiry_date: {
-                        required: true
-                    },
-                    'payment[]': {
-                        required: true,
-                        minlength: 1
-                    }
+                    
                 },
 
                 messages: { // custom messages for radio buttons and checkboxes
@@ -223,6 +197,28 @@ var FormWizard = function () {
                         return false;
                     }
 
+                    
+                    if (index == 1){
+                        var email = $("input[name='email']").val();
+                        var password = $("input[name='password']").val();
+
+                        if (window.user && !window.user.email){
+                            firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(_error) {
+                                // Handle Errors here.
+                                var errorCode = _error.code;
+                                var errorMessage = _error.message;
+                                // ...
+                                if (errorCode == "auth/email-already-in-use"){
+                                    $('#form_wizard_1').bootstrapWizard('previous');
+                                    error.show();
+                                    $("input[name='email']").closest('.form-group').removeClass("valid").addClass("has-error");
+                                    $("#email-error").removeClass("valid").addClass("has-error").text(errorMessage)
+                                }
+                            });
+                        }
+
+                    }
+                    
                     handleTitle(tab, navigation, index);
                 },
                 onPrevious: function (tab, navigation, index) {
@@ -250,6 +246,18 @@ var FormWizard = function () {
             $('#country_list', form).change(function () {
                 form.validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
             });
+
+            //Check for already filled fields:
+            //Check if password is there
+            var current_step = $('#form_wizard_1').bootstrapWizard('currentIndex');
+            if (current_step == 0){
+                if (window.user && window.user.email){
+                    $("input[name='email']").val(window.user.email);
+                    $('#form_wizard_1').bootstrapWizard('next');
+
+
+                }
+            }
         }
 
     };

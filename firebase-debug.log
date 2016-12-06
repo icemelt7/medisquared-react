@@ -1,0 +1,58 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] CLI Version:  3.2.0
+[debug] Platform:     darwin
+[debug] Node Version: v6.8.1
+[debug] Time:         Tue Dec 06 2016 12:32:20 GMT+0400 (GST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/medisquared 
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/medisquared/tokens 
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'medisquared'...
+[info] 
+[info] i  deploying database, hosting
+[info] ✔  database: rules ready to deploy.
+[info] i  hosting: preparing build directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/medisquared/uploads/-KYIFnBhz9LCH3YdIjcB?fileCount=8468&message= 
+[debug] <<< HTTP RESPONSE 401
+[debug] <<< HTTP RESPONSE BODY undefined
+[debug] TypeError: Cannot read property 'error' of undefined
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:10:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:37:25)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:186:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1081:10)
+    at emitOne (events.js:96:13)
+    at Request.emit (events.js:188:7)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1001:12)
+    at IncomingMessage.g (events.js:291:16)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] CLI Version:  3.2.0
+[debug] Platform:     darwin
+[debug] Node Version: v6.8.1
+[debug] Time:         Tue Dec 06 2016 14:49:58 GMT+0400 (GST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/medisquared 
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/medisquared/tokens 
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'medisquared'...
+[info] 
+[info] i  deploying database, hosting
+[info] ✔  database: rules ready to deploy.
+[info] i  hosting: preparing build directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/medisquared/uploads/-KYIkIA_ieJT_AH-5dVj?fileCount=8468&message= 

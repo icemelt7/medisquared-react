@@ -8,8 +8,9 @@ class CompanyRegister extends Component {
                 "assets/global/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js", 
                 "assets/global/plugins/jquery-repeater/jquery.repeater.js" ,
                 "assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"], 'external-scripts');
+        
         $script.ready('external-scripts', function() {
-            $script(["assets/pages/scripts/form-repeater.min.js","assets/pages/scripts/form-wizard.js"]);
+            $script(["assets/pages/scripts/form-wizard.js"]);
         })
         
     }

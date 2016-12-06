@@ -2,6 +2,35 @@ import React, {Component} from 'react';
 
 /* eslint-disable */
 class UserRegister extends Component {
+  constructor(){
+    super();
+    this.registerUsernameAndPassword.bind(this);
+  }
+  registerUsernameAndPassword(){
+
+  }
+  componentDidMount(){
+        $script(["assets/global/plugins/select2/js/select2.full.min.js", 
+                "assets/global/plugins/jquery-validation/js/jquery.validate.min.js" ,
+                "assets/global/plugins/jquery-validation/js/additional-methods.min.js", 
+                "assets/global/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js", 
+                "assets/global/plugins/jquery-repeater/jquery.repeater.js" ,
+                "assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"], 'external-scripts');
+        
+        $script.ready('external-scripts', function() {
+            $script(["assets/pages/scripts/form-repeater.js","assets/pages/scripts/form-wizard.js"]);
+        })
+        
+        //Check for the user object
+        if (!window.user){
+          firebase.auth().signInAnonymously().catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // ...
+          });
+        }
+    }
   render() {
     return (
 
@@ -66,7 +95,7 @@ class UserRegister extends Component {
                 </div>*/}
               </div>
               <div className="portlet-body form">
-                <form className="mt-repeater form-horizontal" action="#" id="submit_form" method="POST">
+                <form className="form-horizontal" action="#" id="submit_form" method="POST">
                   <div className="form-wizard">
                     <div className="form-body">
                       <ul className="nav nav-pills nav-justified steps">
@@ -88,7 +117,7 @@ class UserRegister extends Component {
                           <a href="#tab3" data-toggle="tab" className="step active">
                             <span className="number"> 3 </span>
                             <span className="desc">
-                              <i className="fa fa-check" /> Billing Setup </span>
+                              <i className="fa fa-check" /> Previous Employer Details </span>
                           </a>
                         </li>
                         <li>
@@ -110,12 +139,12 @@ class UserRegister extends Component {
                         <div className="tab-pane active" id="tab1">
                           <h3 className="block">Login details</h3>
                           <div className="form-group">
-                            <label className="control-label col-md-3">Username
+                            <label className="control-label col-md-3">Email
                               <span className="required" aria-required="true"> * </span>
                             </label>
                             <div className="col-md-4">
-                              <input type="text" className="form-control" name="username" />
-                              <span className="help-block"> Provide your username </span>
+                              <input type="text" className="form-control" name="email"  />
+                              <span className="help-block"> Provide your email </span>
                             </div>
                           </div>
                           <div className="form-group">
@@ -144,7 +173,7 @@ class UserRegister extends Component {
                               <span className="required" aria-required="true"> * </span>
                             </label>
                             <div className="col-md-4">
-                              <input type="text" className="form-control" name="fullname" />
+                              <input type="text" className="form-control" name="fullname" autoComplete="name" />
                               <span className="help-block"> Provide your fullname </span>
                             </div>
                           </div>
@@ -168,7 +197,7 @@ class UserRegister extends Component {
                               <span className="required" aria-required="true"> * </span>
                             </label>
                             <div className="col-md-4">
-                              <input type="text" className="form-control" name="email" />
+                              <input type="text" className="form-control" name="email" autoComplete="email"/>
                               <span className="help-block"> Provide your email address </span>
                             </div>
                           </div>
@@ -442,10 +471,10 @@ class UserRegister extends Component {
                             </div>
                           </div>
                           <h3 className="block">Educational details</h3>
-                          <div data-repeater-list="group-a">
-                            <div data-repeater-item className="mt-repeater-item">
+                          <div className="mt-repeater" data-repeater-list="group-a">
+                            <div className="mt-repeater-item">
                               {/* jQuery Repeater Container */}
-                              <div className="mt-repeater-input form-group">
+                              <div data-repeater-item className="mt-repeater-input form-group">
                                 <label className="control-label col-md-3">Name of Institute
                                   <span className="required" aria-required="true"> * </span>
                                 </label>
@@ -454,7 +483,7 @@ class UserRegister extends Component {
                                   <span className="help-block"> Provide your email address </span>
                                 </div>
                               </div>
-                              <div className="mt-repeater-input form-group">
+                              <div data-repeater-item className="mt-repeater-input form-group">
                                 <label className="control-label col-md-3">Start Date
                                   <span className="required" aria-required="true"> * </span>
                                 </label>
@@ -462,7 +491,7 @@ class UserRegister extends Component {
                                   <input className="input-group form-control form-control-inline date date-picker" size={16} type="text" defaultValue="01/08/2016" name="date-input-start" data-date-format="dd/mm/yyyy" />
                                 </div>
                               </div>
-                              <div className="mt-repeater-input form-group">
+                              <div data-repeater-item className="mt-repeater-input form-group">
                                 <label className="control-label col-md-3">End Date
                                   <span className="required" aria-required="true"> * </span>
                                 </label>
@@ -470,7 +499,7 @@ class UserRegister extends Component {
                                   <input className="input-group form-control form-control-inline date date-picker" size={16} type="text" defaultValue="01/08/2016" name="date-input-end" data-date-format="dd/mm/yyyy" />
                                 </div>
                               </div>
-                              <div className="mt-repeater-input">
+                              <div data-repeater-item className="mt-repeater-input">
                                 <a href="javascript:;" data-repeater-delete className="btn btn-danger mt-repeater-delete">
                                   <i className="fa fa-close" /> Delete</a>
                               </div>

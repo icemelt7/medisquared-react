@@ -14,8 +14,8 @@
         <meta content="Preview page of Metronic Admin Theme #1 for blank page layout" name="description" />
         <meta content="" name="author" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-        <link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css" />
+        <!-- link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" / -->
+        <!-- link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css" / -->
 
         <link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
@@ -89,6 +89,25 @@
             messagingSenderId: "1093499459353"
         };
         firebase.initializeApp(config);
+
+        firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            window.user = user;
+            // User is signed in.
+            var isAnonymous = user.isAnonymous;
+            var uid = user.uid;
+            if (user.isAnonymous){
+                console.log("User state is anonymous");
+            }else{
+                console.log("Now he is a proper user");
+            }
+            // ...
+        } else {
+            // User is signed out.
+            // ...
+        }
+        // ...
+        });
         </script>
     </body>
 
