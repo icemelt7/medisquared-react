@@ -30,6 +30,8 @@ class UserRegister extends Component {
             // ...
           });
         }
+
+        window.user_type = "jobseeker";
     }
   render() {
     return (

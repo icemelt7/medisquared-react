@@ -13,6 +13,7 @@ class CompanyRegister extends Component {
             $script(["assets/pages/scripts/form-wizard.js"]);
         })
         
+        window.user_type = "company";
     }
     render(){
         
