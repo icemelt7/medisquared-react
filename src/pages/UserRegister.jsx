@@ -21,16 +21,7 @@ class UserRegister extends Component {
             $script(["assets/pages/scripts/form-repeater.js","assets/pages/scripts/form-wizard.js"]);
         })
         
-        //Check for the user object
-        if (!window.user){
-          firebase.auth().signInAnonymously().catch(function(error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // ...
-          });
-        }
-
+        window.page_type = "job_seeker_registration";
         window.user_type = "jobseeker";
     }
   render() {
@@ -145,7 +136,7 @@ class UserRegister extends Component {
                               <span className="required" aria-required="true"> * </span>
                             </label>
                             <div className="col-md-4">
-                              <input type="text" className="form-control" name="email"  />
+                              <input type="text" className="form-control" name="profile_email"  />
                               <span className="help-block"> Provide your email </span>
                             </div>
                           </div>

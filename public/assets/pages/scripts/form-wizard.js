@@ -1,6 +1,4 @@
 var FormWizard = function () {
-
-
     return {
         //main function to initiate the module
         init: function () {
@@ -202,8 +200,9 @@ var FormWizard = function () {
                         var email = $("input[name='email']").val();
                         var password = $("input[name='password']").val();
 
+
                         if (window.user && !window.user.email){
-                            firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(_error) {
+                            registerUserWithEmail(email, password, function(_error) {
                                 // Handle Errors here.
                                 var errorCode = _error.code;
                                 var errorMessage = _error.message;
@@ -211,12 +210,18 @@ var FormWizard = function () {
                                 if (errorCode == "auth/email-already-in-use"){
                                     $('#form_wizard_1').bootstrapWizard('previous');
                                     error.show();
-                                    $("input[name='email']").closest('.form-group').removeClass("valid").addClass("has-error");
+                                    $("input[name='email']").closest('.form-group').removeClass("valid").removeClass("has-success").addClass("has-error");
                                     $("#email-error").removeClass("valid").addClass("has-error").text(errorMessage)
                                 }
-                            });
+                            })
                         }
 
+                    }else if(index == 2){
+                        populateProfileFieldsFromUserObject();
+
+                        var frm = $("#submit_form");
+                        var data = JSON.stringify(frm.serializeArray());
+                        writeUserData(window.user.uid, data);
                     }
                     
                     handleTitle(tab, navigation, index);
@@ -257,6 +262,8 @@ var FormWizard = function () {
             if (current_step == 0){
                 if (window.user && window.user.email){
                     $("input[name='email']").val(window.user.email);
+                    $("input[name='password']").val(window.user.email);
+                    $("input[name='rpassword']").val(window.user.email);
                     $('#form_wizard_1').bootstrapWizard('next');
 
 
