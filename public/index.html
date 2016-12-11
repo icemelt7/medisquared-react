@@ -138,8 +138,12 @@
             firebase.auth().createUserWithEmailAndPassword(email, password).catch(errorCallback);
         }
 
-        function populateProfileFieldsFromUserObject(){
+        function populateProfileFieldsFromUserObject(userId){
+            firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
+                console.log(snapshot.val());
 
+                $('#form_wizard_1').find("form").deserialize(JSON.parse(snapshot.val().value));
+            });
         }
 
         function writeUserData(userId, data) {

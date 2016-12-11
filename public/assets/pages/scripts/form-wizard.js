@@ -216,8 +216,11 @@ var FormWizard = function () {
                             })
                         }
 
+                        if (window.user && window.user.email){
+                            populateProfileFieldsFromUserObject(window.user.uid);
+                        }
+
                     }else if(index == 2){
-                        populateProfileFieldsFromUserObject();
 
                         var frm = $("#submit_form");
                         var data = JSON.stringify(frm.serializeArray());

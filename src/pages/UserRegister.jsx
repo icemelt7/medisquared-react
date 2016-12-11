@@ -15,7 +15,8 @@ class UserRegister extends Component {
                 "assets/global/plugins/jquery-validation/js/additional-methods.min.js", 
                 "assets/global/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js", 
                 "assets/global/plugins/jquery-repeater/jquery.repeater.js" ,
-                "assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"], 'external-scripts');
+                "assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js",
+                "assets/global/scripts/jquery.deserialize.js"], 'external-scripts');
         
         $script.ready('external-scripts', function() {
             $script(["assets/pages/scripts/form-repeater.js","assets/pages/scripts/form-wizard.js"]);
